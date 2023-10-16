@@ -1,0 +1,39 @@
+first way:
+# normalize data 
+X_train_norm, X_test_norm =(x_train - x_train.mean ())/x_train.std(),(x_test -x_test.mean())/x_test.std() 
+
+X_train_norm
+
+*************************************************
+
+second way:
+# normalize data 
+×_norm= (X-X.mean ())/X.std() 
+
+×_norm
+ 
+******************************************************************************************
+و الثانية هى الافضل عشان ال for loop
+بيعيد تقسيم الداتا
+
+*******************************************************************************************
+Normalization can be applied to both inputs and outputs in various machine learning tasks.
+ Here are two common scenarios: 
+
+1. Input normalization: In this case, the purpose is to transform the input data to have a consistent 
+scale or distribution. It is often done to ensure that different features or variables have similar 
+ranges or to make the data more amenable to certain algorithms. For example, in many cases, it's 
+beneficial to normalize input features to have zero mean and unit variance (i.e., standardization). 
+This helps prevent certain features from dominating the learning process due to differences in their 
+scales. 
+
+2. Output normalization: This refers to transforming the outputs or predictions of a model to a desired 
+scale or distribution. It is typically used when the target variable or prediction range needs to be 
+adjusted. For example, if you're working on a regression problem where the target variable represents 
+a price and ranges from 0 to 1000, you might want to normalize the predictions to that range as well. 
+The decision to apply normalization to inputs, outputs, or both depends on the specific problem and 
+the characteristics of the data. There is no one-size-fits-all approach, and the right thing to do 
+depends on various factors, including the nature of the data, the algorithm being used, and 
+the performance requirements. It's important to experiment and evaluate the impact of normalization 
+on your specific task to determine what works best.
+
