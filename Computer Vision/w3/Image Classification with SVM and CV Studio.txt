@@ -1,0 +1,18 @@
+image Classification with SVM and CV Studio
+In this lab, you will learn how to train and use Support Vector Machines (SVM) to classify dogs and cats with the provided dataset.
+
+Opening the tool will direct you to CV Studio. We have already created a project template for you, so you can get right to the action!
+
+To upload the dataset, open the drop down menu at the top right of the page and click "Upload from URL".
+
+Then copy and paste the following URL of the dataset into the appropriate box and click OK:
+
+https://cv-studio-accessible.s3.us-south.cloud-object-storage.appdomain.cloud/cats_dogs_images_.zip
+
+Note: if your internet connection is slow some images may fail to upload, don't worry, your lab will still run. 
+
+cloud url:
+https://vision.skills.network/lti?ltiResourceLinkId=ondemand~NnsrLYMpEembjg5W4rOJ1g%21~4Fnif&projectName=Training_an_image_classifier_with_SVM&template=6076f609681f7f2d5cce5247
+
+page link:
+https://www.coursera.org/learn/introduction-computer-vision-watson-opencv/ungradedLti/4Fnif/image-classification-with-svm-and-cv-studio
