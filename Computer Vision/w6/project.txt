@@ -1,1 +1,112 @@
+Project Overview
+In this course, you learned how to train and use custom classifiers. For the project in this module, you will develop a new custom classifier using one of the classification methods you learnt and then deploy it as a web app using Code Engine. There are various advantages to deploying your classifier. First, you can share your classifier with anyone in the world. They simply need to enter the URL of your model into any web browser. Second, you can showcase your web app in your portfolio and your potential future employers can interact with your project.
 
+Project Scenario
+You have been employed as a Junior Data Scientist by Jokwu, a self-driving car start-up in Capetown, South Africa. Jokwu has created the hardware and parts of the car, and they are beginning to create sensors; the next step is to have a working model that identifies traffic signs. The project and product team have decided to start with stop signs - is it a stop sign or not?
+
+As a first step, you have been given a dataset and tasked with training a model that identifies the stop signs in an image. This will be integrated into a motion detector as a next step.
+
+Project Tasks
+Your job is to load the training images, create features, and train the model. You will then deploy the model to Code Engine so your manager can upload an image of a stop sign and your image classifier will classify the image and tell them to what accuracy it predicts it is correct. You will utilize CV Studio to develop this model and then deploy it as a web app by completing the tasks below.
+
+Once you are done, please take screenshots of your results to upload them for a peer evaluation. This final project will be worth 25% of your final grade.
+
+Task 1: Gather and Upload Your Data
+
+Task 2: Train Your Classifier
+
+Task 3: Deploy Your Model
+
+Task 4: Test Your Classifier
+
+Task 5: Submit Your Assignment and Evaluate Your Peers
+
+*****************************************************************************\
+### Task 1: Gather and Upload Your Data
+
+To train your Classifier, you will need to download the dataset containing the "Stop" sign images found  👉 
+here
+ 👈  and the "not Stop" sign images found  👉 
+here
+ 👈 . They are zipped in a folder.
+
+Click on Open Tool.
+
+Sign in with your created credentials if it prompts you to.
+
+Select the template for this project.
+
+4.  Unzip the files, then drag and drop the folders into CV Studio.
+
+5. Make sure to wait between each folder to ensure that it has loaded properly.
+
+6. Confirm that images have been loaded.
+
+7. In the annotate section, you will see that the images are pre-labeled with the folder name.
+
+Proceed to the next Task, once you have gathered and uploaded your images and verified that your images are pre-labeled in the Annotation tab of CV Studio.
+
+
+the cloud link:
+https://vision.skills.network/lti?ltiResourceLinkId=ondemand~NnsrLYMpEembjg5W4rOJ1g%21~oVCUG&projectName=Final_project_stop_signs&template=60a1659b39fbda308a14b21a
+************************************************************************************************************
+### Task 2: Training Your Classifier
+To get access to the model, a Train run has been created for you. Click on Open Notebook.
+
+
+You can also create your own Train run:
+
+Click on Train Model on the side panel and
+Create a New training run, enter a Name, choose Jupyter notebook as a “Training tool”, and select Convolutional Neural Networks (CNN) with PyTorch.
+
+the instructions in : 
+https://author-ide.skills.network/render?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZF9pbnN0cnVjdGlvbnNfdXJsIjoiaHR0cHM6Ly9jZi1jb3Vyc2VzLWRhdGEuczMudXMuY2xvdWQtb2JqZWN0LXN0b3JhZ2UuYXBwZG9tYWluLmNsb3VkL0lCTURldmVsb3BlclNraWxsc05ldHdvcmstQ1YwMTAxRU4tU2tpbGxzTmV0d29yay9sYWJzL0ZpbmFsUHJvamVjdC1TS08vdHJhaW50YXNrMi5tZCIsInRvb2xfdHlwZSI6InRoZWlhIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE2Nzg3MDg2Nzh9.96Dv3Yb0UTYC0PaVuMdIyk1_6MDgP2zuDmjHbw-u7uo
+*********************************************************************************************************
+### Task 3: Deploy to Code Engine
+Click on Use Model and New Application:
+
+When you click New Application, enter an app name, choose Models in this project, use the saved train model and choose the Test-1-click Deploy your Model to Cloud (Code Engine) and create the application.
+
+Once you are done, it will start deploying and tell you when it is ready.
+
+Once it is ready, you will see the green READY button
+
+the instructions in:
+https://author-ide.skills.network/render?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZF9pbnN0cnVjdGlvbnNfdXJsIjoiaHR0cHM6Ly9jZi1jb3Vyc2VzLWRhdGEuczMudXMuY2xvdWQtb2JqZWN0LXN0b3JhZ2UuYXBwZG9tYWluLmNsb3VkL0lCTURldmVsb3BlclNraWxsc05ldHdvcmstQ1YwMTAxRU4tU2tpbGxzTmV0d29yay9sYWJzL0ZpbmFsUHJvamVjdC1TS08vZGVwbG95dGFzazMubWQiLCJ0b29sX3R5cGUiOiJ0aGVpYSIsImFkbWluIjpmYWxzZSwiaWF0IjoxNjc4NzA4ODU3fQ.3pRvNPWnjRs6ZE6qtuMeSI0IyOJ7lFffxGuK8kxQ8Fc
+*********************************************************************************************************
+### Task 4: Test Your Classifier
+Click on Open Tool to open the Jupyter notebook from the Train model phase.
+Note: Make sure that the result of the training model is visible under Details of Run
+
+
+
+Add the below-mentioned code by adding a cell to the end of the model training notebook
+
+imageNames = ['stop_1.jpeg','stop_2.jpeg','not_stop_1.jpeg']
+for imageName in imageNames:
+    image = Image.open(imageName)
+    transform = composed = transforms.Compose([transforms.Resize((224, 224)), transforms.ToTensor()])
+    x = transform(image)
+    z=model(x.unsqueeze_(0))
+    _,yhat=torch.max(z.data, 1)
+    # print(yhat)
+    prediction = "Stop"
+    if yhat == 1:
+        prediction ="Not Stop"
+    imshow_(transform(image),imageName+": Prediction = "+prediction)
+Copied!
+Now, download the test images.
+You will find test images here. Note: if you are using Firefox, please right-click the link and select Save Link As.
+Then, upload the images to the Skill Network Labs.
+
+
+After uploading the images, Run the code for testing your classifier.
+Take a screenshot of the following image after the prediction. You can find how to take a screenshot for Mac here and Windows here
+
+
+Your prediction will show at the top.
+
+Please take screenshots of each image and its prediction to upload to get full marks on your peer review.
+
+the instructions in:
+https://author-ide.skills.network/render?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZF9pbnN0cnVjdGlvbnNfdXJsIjoiaHR0cHM6Ly9jZi1jb3Vyc2VzLWRhdGEuczMudXMuY2xvdWQtb2JqZWN0LXN0b3JhZ2UuYXBwZG9tYWluLmNsb3VkL0lCTURldmVsb3BlclNraWxsc05ldHdvcmstQ1YwMTAxRU4tU2tpbGxzTmV0d29yay9sYWJzL0ZpbmFsUHJvamVjdC1TS08vdGFzazR3b3JrYXJvdW5kLm1kIiwidG9vbF90eXBlIjoiaW5zdHJ1Y3Rpb25hbC1sYWIiLCJhZG1pbiI6ZmFsc2UsImlhdCI6MTY4MjU3ODU1OH0.XH65xXXNrMBOMjS05BZR-btfm9RmYKgi2hmSfrJArOU
