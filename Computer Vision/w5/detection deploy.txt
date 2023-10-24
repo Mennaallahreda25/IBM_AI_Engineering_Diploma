@@ -1,0 +1,26 @@
+Car Detection with Haar Classifiers
+In this notebook, you will learn how to detect a car in an image using the Haar Cascade Classifiers. You will use CV Studio with a pre-trained detector and will not need to upload any dataset for this lab.
+
+When creating the project make sure the Type of the project is set to Object Detection as shown below.
+For this lab, You will not need to upload any data, you will be using a pre-trained dataset, start from the Use Model to open the notebook.
+
+the cloud link:
+https://vision.skills.network/lti?ltiResourceLinkId=ondemand~NnsrLYMpEembjg5W4rOJ1g%21~63ele&projectName=Object_Detection_with_haar_cascade_classifiers&template=6075d451681f7fcf1fce5238
+
+**********************************************************************************************
+Object Detection using Pre-trained Models CV Studio
+In this lab, you will use MobileNet with Single Shot MultiBox Detector model  as a pre-trained model to detect whether someone is wearing a mask or not wearing a mask. In addition, you will also deploy the app, similar to the CNN classification lab. 
+
+Upload the dataset by URL, through the drop down "Upload" menu, as you have done with previous labs. 
+Use the following URL:
+
+https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-Coursera/dataset/images.zip
+
+Alternatively, you can download the 
+dataset
+ and upload it manually. If you choose to do so, make sure the file is zipped when you upload the dataset.
+
+You will use CV Studio to upload and label images, and to train and deploy Computer Vision models.
+
+the cloud link:
+https://vision.skills.network/lti?ltiResourceLinkId=ondemand~NnsrLYMpEembjg5W4rOJ1g%21~oUrrx&projectName=Object%20Detection%20using%20Pre-trained%20Models&template=60a5436400bdf411bfd3fd02
