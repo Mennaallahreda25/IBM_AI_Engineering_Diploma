@@ -25,9 +25,11 @@ Task 5: Submit Your Assignment and Evaluate Your Peers
 ### Task 1: Gather and Upload Your Data
 
 To train your Classifier, you will need to download the dataset containing the "Stop" sign images found  👉 
-here
+here : https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-Coursera/dataset/stop.zip
+
  👈  and the "not Stop" sign images found  👉 
-here
+here : https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-Coursera/dataset/not_stop.zip
+
  👈 . They are zipped in a folder.
 
 Click on Open Tool.
