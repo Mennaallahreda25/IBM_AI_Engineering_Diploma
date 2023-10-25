@@ -1,1 +1,19 @@
+to deploy:
+https://www.coursera.org/learn/introduction-computer-vision-watson-opencv/ungradedWidget/dRk43/deploying-a-model
+************************************************************************************************
+Use CNN for "Hotdog, Not Hotdog" Classifier and Deploy Model with CV Studio
+In this lab, you will use a Convolutional Neural Network (CNN) to classify whether an image is a hotdog or not a hotdog with the provided dataset.
 
+Opening the tool will direct you to CV Studio. We have already created a project template for you, so you can get right to the action!
+
+To upload the dataset, open the drop down menu at the top right of the page and click "Upload from URL".
+
+
+
+Then copy and paste the following URL of the dataset into the appropriate box and click OK:
+
+https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-Coursera/labs/Module4/images_100_hotdogs_v2.zip
+
+Note: if your internet connection is slow some images may fail to upload, don't worry, your lab will still run. 
+
+#This course uses a third-party app, Use CNN for "Hotdog, Not Hotdog" Classifier and Deploy Model with CV Studio , to enhance your learning experience. The app will reference basic information like your name, email, and Coursera ID.
