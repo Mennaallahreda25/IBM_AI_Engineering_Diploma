@@ -1,1 +1,8 @@
+Objective for Exercise:
+How to use the GPU in Watson Studio.
+Create the instance of the Watson Studio using IBM Cloud
 
+To make sure that GPU is enabled on this instance of Watson Studio press the plan button on the top left. You should see the check mark on the right associated with the Professional Plan which will allow you to use Nvidia GPU.
+
+steps in that link:
+https://author-ide.skills.network/render?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZF9pbnN0cnVjdGlvbnNfdXJsIjoiaHR0cHM6Ly9jZi1jb3Vyc2VzLWRhdGEuczMudXMuY2xvdWQtb2JqZWN0LXN0b3JhZ2UuYXBwZG9tYWluLmNsb3VkL0lCTURldmVsb3BlclNraWxsc05ldHdvcmstREwwMTEwRU4tU2tpbGxzTmV0d29yay9sYWJzL1dlZWs2L0dQVV9zZXR1cC5tZCIsInRvb2xfdHlwZSI6Imluc3RydWN0aW9uYWwtbGFiIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE2ODY4MjI1MDZ9.Jtka9wXUCXm0DCN_IGXj-d_knKulREGbigjJpKR5994
